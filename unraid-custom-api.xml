@@ -47,7 +47,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>API_CODE</ContainerDir>
+      <ContainerDir>/code</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
