@@ -27,12 +27,12 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>API_HOST_PORT</HostPort>
+        <HostPort>5000</HostPort>
         <ContainerPort>5000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>POSTGRES_HOST_PORT</HostPort>
+        <HostPort>5432</HostPort>
         <ContainerPort>5432</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -41,12 +41,12 @@
 
   <Data>
     <Volume>
-      <HostDir>POSTGRES_DATA</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/var/lib/postgresql/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/code</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>API_CODE</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -55,14 +55,4 @@
   <Version>1.0</Version>
   <WebUI>http://[iP]:[API_HOST_PORT:5050]/</WebUI>
   <ExtraParams />
-  <Config Name="POSTGRES_DATA" Target="POSTGRES_DATA" Default="" Mode="" Description="Container Variable: SUBDOMAINS" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="API_CODE" Target="API_CODE" Default="" Mode="" Description="Container Variable: SUBDOMAINS" Type="Path" Display="always" Required="true" Mask="false"/>
-
-  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="false"/>
-
-  <Config Name="POSTGRES_HOST_PORT" Target="POSTGRES_HOST_PORT" Default="5432" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="false"/>
-
-  <Config Name="API_HOST_PORT" Target="API_HOST_PORT" Default="5050" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="false"/>
 </Container>
