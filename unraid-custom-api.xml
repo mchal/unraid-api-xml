@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>Custom API + Postgres</Name>
+  <Name>unraid-custom-api</Name>
   <Description>For private use only</Description>
   <Registry>https://registry.hub.docker.com/u/mchal/unraid-api/</Registry>
   <Repository>mchal/unraid-api</Repository>
